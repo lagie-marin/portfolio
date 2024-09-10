@@ -8,7 +8,7 @@ function NavBar() {
     return <>
         <Navbar collapseOnSelect expand="md" className="bg-body-tertiary" data-bs-theme="dark">
             <Container style={{position: 'relative'}}>
-                <Image src='./src/assets/Marin.png' fluid style={{height: "10vh", right: "2vh", position: "relative"}}/>
+                <Image src='assets/Marin.png' fluid style={{height: "10vh", right: "2vh", position: "relative"}}/>
                 <Navbar.Brand href="">Marin LAGIÉ</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
