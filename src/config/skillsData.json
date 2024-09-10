@@ -1,0 +1,45 @@
+{
+    "Default": "Languages",
+    "Languages": {
+        "id": "0",
+        "skills": [
+            "C",
+            "PHP",
+            "HTML",
+            "CSS",
+            "JS",
+            "TS",
+            "Python",
+            "Node.js",
+            "Bash",
+            "Blueprint",
+            "SFML"
+        ]
+    },
+    "Base de données": {
+        "id": "1",
+        "skills": [
+            "MongoDB",
+            "MySql",
+            "PhpMyAdmin"
+        ]
+    },
+    "Outil de travail": {
+        "id": "2",
+        "skills": [
+            "Vscode",
+            "Visual Studio",
+            "IntelliJ IDEA",
+            "Eclipse",
+            "Docker",
+            "Unity",
+            "Unreal Engine"
+        ]
+    },
+    "FrameWork": {
+        "id": "3",
+        "skills": [
+            "React"
+        ]
+    }
+}

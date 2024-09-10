@@ -1,0 +1,21 @@
+
+.button-hover {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 55px;
+    top: 0px;
+    left: 0px;
+    background-color: red;
+    z-index: -1;
+    transition: .4s linear;
+}
+
+.button-hover::before {
+    width: 100px;
+}
+
+.is-active {
+    z-index: -2;
+    background-color: rgb(179, 70, 159);
+}

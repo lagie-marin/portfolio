@@ -1,0 +1,90 @@
+.project-box {
+    flex-grow: 1;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(246, 127, 244, 0.72);
+    width: 30vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card {
+    border-radius: 20px;
+    color: black;
+    max-width: 50vh;
+    font-size: x-large;
+    padding: 1vh;
+    height: 2vh;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+
+.project-type, .disabled-button {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    transition: .4s linear;
+}
+
+.project-type {
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.disabled-button {
+    background-color: rgb(172, 79, 124);
+    cursor: default;
+}
+
+.project-type::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 15px;
+    background-color: rgb(255, 0, 208);
+    z-index: -1;
+    transition: .4s linear;
+}
+.project-type:hover::before {
+    width: 100%;
+}
+
+
+.c {
+    background-color: yellow;
+}
+
+.nodejs {
+    background-color: greenyellow;
+}
+
+.python {
+    background-color: rgb(254, 95, 95);
+}
+
+.sql {
+    background-color: rgb(0, 145, 255);
+}
+
+.Ecole {
+    background-color: rgb(234, 65, 186);
+}
+
+.btn-project {
+    bottom: -5px;
+}
+
+
+.btn-project {
+    background-color: transparent;
+    margin-top: auto;
+    width: 99%;
+    border-radius: 15px;
+}

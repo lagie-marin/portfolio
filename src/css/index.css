@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+:root {
+    --background_presentation: url("../assets/EPts.gif");
+}
+
+body {
+    color: rgba(255, 255, 255, 0.849);
+    text-align: center;
+}
+
+.bg-img div {
+    border-radius: 15px;
+}
+
+.bg-img {
+    display: flex;
+    background-size: cover;
+    height: 88.5vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: var(--background_presentation);
+    background-repeat: no-repeat;
+}
+
+.main-content {
+    display: flex;
+    background: rgba(255, 255, 255, 0.235);
+    backdrop-filter: blur(3px);
+    width: 100vh;
+    height: 60vh;
+}
+
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#about-box {
+    display: flex;
+    width: 100%;
+    height: 4vh;
+    flex-wrap: nowrap;
+    padding-bottom: 5vh;
+}
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.235);
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 85%;
+}
+
+.item {
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+#desc-about {
+    margin-top: 5vh;
+}
+
+.sub-title {
+    position: relative;
+    font-size: 3vh;
+    width: auto;
+}
+
+.text {
+    font-size: 2vh;
+}
+
+#content-1 {
+    width: 20%;
+    padding-right: 10vh;
+}
+
+.skills-element {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.skills-type {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+.skills-type::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(172, 79, 124);
+    z-index: -1;
+    transition: .4s linear;
+}
+.skills-type:hover::before {
+    width: 100%;
+}
+
+.title-style {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.scrollable {
+    max-height: 85%;
+    overflow-y: auto;
+}

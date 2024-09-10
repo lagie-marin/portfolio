@@ -1,0 +1,34 @@
+{
+    "my_rpg": {
+        "links": "https://github.com/lagie-marin/my_rpg",
+        "links_title": "Visit",
+        "description": "Création d'un jeu RPG en groupe",
+        "type_project": "Ecole",
+        "groupe": "groupe",
+        "languages": [ "c" ]
+    },
+    "myhunter": {
+        "links": "https://github.com/lagie-marin/myhunter",
+        "links_title": "Visit",
+        "description": "Création d'un jeu 2D basé sur le Dunk Hunt",
+        "type_project": "Ecole",
+        "groupe": null,
+        "languages": [ "c" ]
+    },
+    "Petroleum": {
+        "links": null,
+        "links_title": "En Maintenance",
+        "description": "Simplifier la gestion de projets et la gestion de recrutement sur les serveurs discords.",
+        "type_project": "Personnel",
+        "groupe": null,
+        "languages": ["nodejs", "python", "sql"]
+    },
+    "Popeye": {
+        "links": "https://github.com/lagie-marin/popeye",
+        "links_title": "Visit",
+        "description": "Créer des images dockers",
+        "type_project": "Ecole",
+        "groupe": null,
+        "languages": ["docker", "Devops"]
+    }
+}
