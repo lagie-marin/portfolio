@@ -20,7 +20,7 @@ export function Project() {
         }
     }
     return <>
-        <div className="project-box">
+        <div id="project" className="project-box">
             <h3>Mes projets</h3>
             <div style={{ display: "flex", gap: "1vh", flexWrap: "wrap", justifyContent: "center"}}>
                 {Object.keys(projectsData).map((name, index) => {
