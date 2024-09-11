@@ -41,8 +41,10 @@ function About() {
                             partagent cette même passion pour le développement technologique.
                         </p>
                         <p>
-                            Je suis ouvert à toute opportunité où je pourrais contribuer, apprendre et évoluer. Si vous avez une offre
-                            correspondant à mes compétences et à mes expériences, n'hésitez pas à me contacter.
+                            Je suis ouvert à toute opportunité où je pourrais contribuer, apprendre et évoluer. Je vous apporterai
+                            mes connaissances dans les technologies les plus récentes. Si vous avez une offre correspondant à mon
+                            profil, je pourrai certainement mettre à votre disposition mes compétences et à mes expériences,
+                            n'hésitez pas à me contacter.
                         </p>
                     </Box.Description>
                 </Box>
@@ -56,7 +58,7 @@ function About() {
 
 function Projects() {
     return <>
-        <Project/>
+        <Project />
     </>
 }
 
