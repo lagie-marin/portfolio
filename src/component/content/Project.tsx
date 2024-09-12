@@ -30,7 +30,7 @@ export function Project() {
                             <h4>{name}</h4>
                             <p style={{padding: "0vh .1vh"}}>{project.description}</p>
                             <span className={`card ${project.type_project}`}>{project.type_project}</span>
-                            <div style={{ display: 'flex', gap: '0.2vh', flexWrap: 'wrap', justifyContent: 'center' }}>
+                            <div className="list-language">
                                 {
                                     project.languages.map((name, index) => (
                                         <span className={`card ${name}`} key={index}>{name}</span>
