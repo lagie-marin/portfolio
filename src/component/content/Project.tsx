@@ -19,6 +19,7 @@ export function Project() {
             window.open(link);
         }
     }
+    
     return <>
         <div id="project" className="project-box">
             <h3>Mes projets</h3>
@@ -29,11 +30,11 @@ export function Project() {
                         <div key={index} className="project-card">
                             <h4>{name}</h4>
                             <p style={{padding: "0vh .1vh"}}>{project.description}</p>
-                            <span className={`card ${project.type_project}`}>{project.type_project}</span>
+                            <span className="card type-project">{project.type_project}</span>
                             <div className="list-language">
                                 {
                                     project.languages.map((name, index) => (
-                                        <span className={`card ${name}`} key={index}>{name}</span>
+                                        <span className="card" key={index}>{name}</span>
                                     ))
                                 }
                             </div>

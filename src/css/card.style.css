@@ -1,6 +1,7 @@
 .project-box {
     flex-grow: 1;
 }
+
 .project-card {
     display: flex;
     flex-direction: column;
@@ -8,8 +9,17 @@
     width: 30vh;
     align-items: center;
     justify-content: center;
-    
+
 }
+
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
 .card {
     border-radius: 20px;
     color: black;
@@ -22,7 +32,8 @@
     margin-bottom: 1vh;
 }
 
-.project-type, .disabled-button {
+.project-type,
+.disabled-button {
     position: relative;
     margin: 10px;
     padding: 10px;
@@ -52,6 +63,7 @@
     z-index: -1;
     transition: .4s linear;
 }
+
 .project-type:hover::before {
     width: 100%;
 }
@@ -62,15 +74,17 @@
 
 .btn-project {
     background-color: transparent;
-    margin-top: auto;
     width: 97%;
     border-radius: 15px;
 }
 
 .list-language {
+    position: relative;
     display: flex;
     gap: .2vh;
     flex-wrap: wrap;
-    justify-content: center;
+}
+
+.type-project {
     margin-top: auto;
 }
