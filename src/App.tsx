@@ -1,3 +1,4 @@
+import { Contact } from "./component/contact/Contact";
 import { Box } from "./component/content/Box";
 import { Project } from "./component/content/Project";
 import Skills from "./component/content/Skills";
@@ -16,7 +17,8 @@ function MainContent() {
     return <>
         <div className="box-container container scrollable">
             <About />
-            <Projects />
+            <Project />
+            <Contact/>
         </div>
     </>
 }
@@ -53,12 +55,6 @@ function About() {
                 </Box>
             </Box>
         </div>
-    </>
-}
-
-function Projects() {
-    return <>
-        <Project />
     </>
 }
 

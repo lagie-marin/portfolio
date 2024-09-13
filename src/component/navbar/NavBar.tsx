@@ -14,7 +14,7 @@ function NavBar() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#about">A propos</Nav.Link>
-                        <Nav.Link href="#project">Projet</Nav.Link>
+                        <Nav.Link href="#project">Projets</Nav.Link>
                         <Nav.Link href="#contact">Contact</Nav.Link>
                     </Nav>
                     <Nav>
