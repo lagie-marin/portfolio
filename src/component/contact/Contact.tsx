@@ -9,7 +9,7 @@ export function Contact() {
         e.preventDefault();
 
         if (form.current) {
-            emailjs.sendForm('service_x2xtvgn', 'template_ew48ydw', form.current, {
+            emailjs.sendForm('service_cdj3z76', 'template_ew48ydw', form.current, {
                 publicKey: 'TMlwj6p8LKNT7MFOs',
             })
                 .then(
