@@ -12,11 +12,11 @@ export function About() {
                     </div>
                     <div className="info-item">
                         <strong className="text-normal">Âge</strong>
-                        <p className="text-normal">25 ans</p>
+                        <p className="text-normal">20 ans</p>
                     </div>
                     <div className="info-item">
                         <strong className="text-normal">Localisation</strong>
-                        <p className="text-normal">Paris, France</p>
+                        <p className="text-normal">Lyon, France</p>
                     </div>
                 </div>
                 <div className="text-normal about-me">
