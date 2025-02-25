@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Badge, Button, Card, CloseButton, DrawerActionTrigger, DrawerBody, DrawerCloseTrigger, DrawerContent, DrawerHeader, DrawerRoot, DrawerTitle, DrawerTrigger, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import { Box } from "./Box";
-import { getColorByType } from "../project/ProjectDetails";
 import "./project.css";
 import "../../css/card.style.css";
 import projectDataJson from "../../config/projectsData.json";
@@ -10,6 +9,7 @@ import { Carousel } from "react-bootstrap";
 interface ProjectData {
     [key: string]: {
         links: string | null;
+        desc_btn: string | null;
         description: string;
         type_project: string;
         groupe: string | null;
@@ -18,6 +18,19 @@ interface ProjectData {
         carousel: string[];
     }
 }
+
+export const getColorByType = (type: string) => {
+    switch (type) {
+        case 'Perso':
+            return 'teal';
+        case 'Epitech':
+            return 'blue';
+        case 'Nouveau':
+            return 'orange';
+        default:
+            return 'gray';
+    }
+};
 
 export function Project() {
     const projectData: ProjectData = projectDataJson;
@@ -37,7 +50,7 @@ export function Project() {
     }, []);
 
     return (
-        <Box id="content-6" title="Mes projets" titleClass='title' className="project" style={{ alignItems: "center" }}>
+        <Box id="content-6" title="Mes projets" titleClass='title' className="project" titleStyle={{color: "white"}} style={{ alignItems: "center" }}>
             <Text className="text-normal">Découvrez mes derniers projets dans le développement informatique</Text>
             <div className="cardContainer" style={{ display: "flex", gap: "4vh", flexWrap: "wrap", justifyContent: "center" }}>
                 {Object.keys(projectData).map(name => {
@@ -45,19 +58,19 @@ export function Project() {
                     return (
                         <Card.Root key={name} className="cardElement" maxW="sm" overflow="hidden">
                             <Image src={project.img} alt={name} className="cardImage" />
-                            <Card.Body>
+                            <Card.Body className="cardBody">
                                 <Stack direction="row">
                                     <Badge size="md" variant="solid" colorPalette={getColorByType(project.type_project)}>{project.type_project}</Badge>
                                 </Stack>
                                 <Card.Title style={{ color: "white" }}>{name}</Card.Title>
-                                <HStack wrap="wrap">
-                                    <DrawerRoot key="md" size="md">
+                                <HStack wrap="wrap" className="buttonContainer">
+                                    <DrawerRoot key={`drawer-${name}`} size="md">
                                         <DrawerTrigger asChild>
                                             <Button size="sm" className="visible-button">
-                                                Voir le pojet
+                                                Voir le projet
                                             </Button>
                                         </DrawerTrigger>
-                                        <DrawerContent className="drower" style={{top: `calc(${drawerTop}px - 14.0vh)`}}>
+                                        <DrawerContent className="drower" style={{top: `calc(${drawerTop}px - 7vh)`}}>
                                             <DrawerHeader>
                                                 <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
                                                     <DrawerTitle color="white">{name}</DrawerTitle>
@@ -71,12 +84,16 @@ export function Project() {
                                             </DrawerHeader>
                                             <DrawerBody>
                                                 <Carousel>
-                                                    {project.carousel.map((img: string) => (
-                                                        <Carousel.Item>
-                                                        <img className="d-block w-100 carousel-image" src={img} alt={img} />
-                                                    </Carousel.Item>
+                                                    {project.carousel.map((img: string, index: number) => (
+                                                        <Carousel.Item key={`carousel-${name}-${index}`}>
+                                                            <img className="d-block w-100 carousel-image" src={img} alt={img} />
+                                                        </Carousel.Item>
                                                     ))}
                                                 </Carousel>
+                                                {
+                                                    project.links &&
+                                                    (<Button size="sm" className="visible-button w-100" onClick={() => window.open(project.links, '_blank')}>{project.desc_btn}</Button>)
+                                                }
                                                 <Text className="projectDescription" color="white">
                                                     <Text fontWeight="bold">Description:</Text>
                                                     <div dangerouslySetInnerHTML={{ __html: project.description }} />

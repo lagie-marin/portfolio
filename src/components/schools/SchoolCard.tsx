@@ -2,6 +2,8 @@ import { Box, Image, Text, VStack } from "@chakra-ui/react";
 import styles from './SchoolCard.module.css';
 
 interface CardProps {
+    id: string;
+    className: string
     smallImage: string;
     schoolImage: string;
     title: string;
@@ -9,9 +11,9 @@ interface CardProps {
     actual: boolean;
 }
 
-const SchoolCard: React.FC<CardProps> = ({ smallImage, schoolImage, title, description, actual }) => {
+const SchoolCard: React.FC<CardProps> = ({ id, className, smallImage, schoolImage, title, description, actual}) => {
     return <>
-        <Box className={styles.schoolCard}>
+        <Box className={`${styles.schoolCard} ${className}`} id={id}>
             {actual && (
                 <Box className={styles.actualIndicator} />
             )}

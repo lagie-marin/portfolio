@@ -1,6 +1,6 @@
 import { useState } from "react";
 import skillsDataJson from "../../config/skillsData.json"
-import { Button } from "../form/Button";
+import { Button } from "@chakra-ui/react";
 
 type SkillCategory = {
     id: string;

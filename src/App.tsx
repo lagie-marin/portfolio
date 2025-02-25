@@ -7,8 +7,8 @@ import "./css/app.style.css"
 function App() {
     return (
         <Router>
+            <NavBar />
             <div className='app-container'>
-                <NavBar />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/redirect" element={<Navigate to="/" />} />

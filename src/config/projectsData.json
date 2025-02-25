@@ -1,6 +1,7 @@
 {
     "MyRPG": {
         "links": "https://github.com/lagie-marin/my_rpg",
+        "desc_btn": "Voir le projet",
         "description": "My RPG: Développement d'un jeu de rôle en C avec la librairie CSFML.<br/> - Gestion, de la carte et des collisions<br/> - Gestion des menus<br/> - Gestion des combats",
         "type_project": "Epitech",
         "groupe": "groupe",
@@ -10,6 +11,7 @@
     },
     "MyHunter": {
         "links": "https://github.com/lagie-marin/myhunter",
+        "desc_btn": "Voir le projet",
         "description": "MyHunter: Réalisation d'un jeu vidéo basé sur les règles du Duck Hunt. Les règles sont les suivantes:<br/>- Le joueur est un chasseur qui tire sur des canards.<br/>- Les canards doivent apparaître à l'écran et se déplacer d'un côté à l'autre.<br/>- Le joueur peux cliquer dessus pour les tirer.<br/>- Savoir gérer les entrées de l'utilisateur<br/>- Afficher des sprites",
         "type_project": "Epitech",
         "groupe": null,
@@ -19,6 +21,7 @@
     },
     "Petroleum": {
         "links": null,
+        "desc_btn": null,
         "description": "Simplifier la gestion de projets et la gestion de recrutement sur les serveurs discords.",
         "type_project": "Perso",
         "groupe": null,
@@ -28,6 +31,7 @@
     },
     "Popeye": {
         "links": "https://github.com/lagie-marin/popeye",
+        "desc_btn": "Voir le projet",
         "description": "Conteneuriser et définir le déploiement d'une application de sondage Web simple. Il y a cinq éléments constituant la candidature:<br/><br/>- Poll, une application Web Flask Python qui collecte les votes et les envoie dans une file d'attente Redis.<br/>- Une file d'attente Redis, qui contient les votes envoyés par l'application Poll, en attendant qu'il soient consommés par le Worker.<br/>- Une base de données PostgreSQL, qui stocke (de manière persistante) les votes stockés par le Worker.<br/>- Result, une application Web Node.js qui récupère les votes de la base de données et affiche le résultat.",
         "type_project": "Epitech",
         "groupe": null,

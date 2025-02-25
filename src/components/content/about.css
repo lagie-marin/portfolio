@@ -1,0 +1,33 @@
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto 2rem auto;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(0.5rem);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: white;
+    border-color: white;
+    margin-top: 10vh;
+}
+
+.info-item {
+    padding: 0 1rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-item:last-child {
+    border-right: none;
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    margin: 0;
+}

@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: black;
     color: rgba(255, 255, 255, 0.849);
     text-align: center;
 }
@@ -13,35 +14,15 @@ body {
     border-radius: 15px;
 }
 
-.main-content {
-    display: flex;
-    background: rgba(255, 255, 255, 0.235);
-    backdrop-filter: blur(3px);
-    width: 100vh;
-    height: 60vh;
-}
-
 .roboto-one-regular {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-#about-box {
-    display: flex;
-    width: 100%;
-    height: 4vh;
-    flex-wrap: nowrap;
-    padding-bottom: 5vh;
-}
-
 .item {
     flex-grow: 1;
     flex-wrap: wrap;
-}
-
-#desc-about {
-    margin-top: 5vh;
 }
 
 .sub-title {
@@ -88,15 +69,4 @@ body {
 }
 .skills-type:hover::before {
     width: 100%;
-}
-
-.title-style {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.scrollable {
-    max-height: 85%;
-    overflow-y: auto;
 }

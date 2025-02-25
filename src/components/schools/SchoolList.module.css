@@ -9,3 +9,13 @@
     font-size: 24px;
     color: white;
 }
+
+@media (max-width: 1676px) {
+    .schoolList {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}

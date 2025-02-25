@@ -4,6 +4,7 @@ import Skills from "../content/Skills";
 import './home.css';
 import SchoolLife from '../content/SchoolLife';
 import { Project } from '../content/Project';
+import { About } from '../content/About';
 
 const Home: React.FC = () => {
     return (
@@ -14,14 +15,17 @@ const Home: React.FC = () => {
 function MainContent() {
     return <>
         <div className="box-container">
-            <Box id="content-2" title="Mes compétences" titleClass="title">
+            <Box id="skill" title="Mes compétences" titleClass="title" className="primary">
                 <Skills />
             </Box>
-            <Box id="content-3" title="Études" titleClass="sub-sub-title">
+            <Box id="school" title="Études" titleClass="sub-sub-title" className="primary">
                 <SchoolLife />
             </Box>
-            <Box id="content-5" title="Projets" titleClass="sub-sub-title">
+            <Box id="project" title="Projets" titleClass="sub-sub-title" className="primary">
                 <Project />
+            </Box>
+            <Box id="about" title="À propos" titleClass="sub-sub-title" className="primary">
+                <About />
             </Box>
         </div>
     </>
