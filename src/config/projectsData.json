@@ -20,7 +20,7 @@
         "carousel": ["myhunter.png"]
     },
     "Petroleum": {
-        "links": null,
+        "links": "",
         "desc_btn": null,
         "description": "Simplifier la gestion de projets et la gestion de recrutement sur les serveurs discords.",
         "type_project": "Perso",

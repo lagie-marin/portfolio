@@ -8,7 +8,7 @@ import { Carousel } from "react-bootstrap";
 
 interface ProjectData {
     [key: string]: {
-        links: string | null;
+        links: string;
         desc_btn: string | null;
         description: string;
         type_project: string;
@@ -91,7 +91,7 @@ export function Project() {
                                                     ))}
                                                 </Carousel>
                                                 {
-                                                    project.links &&
+                                                    project.links != "" &&
                                                     (<Button size="sm" className="visible-button w-100" onClick={() => window.open(project.links, '_blank')}>{project.desc_btn}</Button>)
                                                 }
                                                 <Text className="projectDescription" color="white">
