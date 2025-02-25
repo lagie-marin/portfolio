@@ -32,17 +32,17 @@ function Skills()
             <div style={{ display: 'flex', gap: '0.2vh', flexWrap: 'wrap', justifyContent: "center" }}>
                 {Object.keys(skillsData).map((category, index) => (
                     category !== 'Default' && (
-                        <Button key={index} id={category} className={`skills-type ${category == activeButton ? "is-active" : ""}`} onClick={() => handleCategoryClick(category)}>{category}</Button>
+                        <Button key={index} id={category} className={`skills-type text ${category == activeButton ? "is-active" : ""}`} onClick={() => handleCategoryClick(category)}>{category}</Button>
                     )
                 ))}
             </div>
             <div>
                 {selectedCategory && isSkillCategory(skillsData[selectedCategory]) && (
                     <div>
-                        <h3>{selectedCategory}</h3>
+                        <h3 className="sub-title">{selectedCategory}</h3>
                         <div id={skillsData[selectedCategory].id} key={selectedCategory} style={{ display: 'flex', gap: '0.2vh', flexWrap: 'wrap', justifyContent: "center" }}>
                             {skillsData[selectedCategory].skills.map((skill, index) => (
-                                <div className="skills-element" key={index}>
+                                <div className="skills-element text" key={index}>
                                     {skill}
                                 </div>
                             ))}

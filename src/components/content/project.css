@@ -1,0 +1,67 @@
+.cardContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardImage {
+    max-width: 100%;
+    max-height: 170px;
+    object-fit: cover;
+}
+.visible-button {
+    background-color: white; 
+    color: black;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.visible-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.drawer-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.carousel-image {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+.drower {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    height: 100vh;
+    margin-top: 2vh;
+    background-color: #18181b;
+}

@@ -1,34 +1,38 @@
 {
-    "my_rpg": {
+    "MyRPG": {
         "links": "https://github.com/lagie-marin/my_rpg",
-        "links_title": "Visit",
-        "description": "Création d'un jeu RPG en groupe",
-        "type_project": "Ecole",
+        "description": "My RPG: Développement d'un jeu de rôle en C avec la librairie CSFML.<br/> - Gestion, de la carte et des collisions<br/> - Gestion des menus<br/> - Gestion des combats",
+        "type_project": "Epitech",
         "groupe": "groupe",
-        "languages": [ "c" ]
+        "languages": [ "c" ],
+        "img": "my_rpg.png",
+        "carousel": ["my_rpg.png"]
     },
-    "myhunter": {
+    "MyHunter": {
         "links": "https://github.com/lagie-marin/myhunter",
-        "links_title": "Visit",
-        "description": "Création d'un jeu 2D basé sur le Dunk Hunt",
-        "type_project": "Ecole",
+        "description": "MyHunter: Réalisation d'un jeu vidéo basé sur les règles du Duck Hunt. Les règles sont les suivantes:<br/>- Le joueur est un chasseur qui tire sur des canards.<br/>- Les canards doivent apparaître à l'écran et se déplacer d'un côté à l'autre.<br/>- Le joueur peux cliquer dessus pour les tirer.<br/>- Savoir gérer les entrées de l'utilisateur<br/>- Afficher des sprites",
+        "type_project": "Epitech",
         "groupe": null,
-        "languages": [ "c" ]
+        "languages": [ "c" ],
+        "img" : "myhunter.png",
+        "carousel": ["myhunter.png"]
     },
     "Petroleum": {
         "links": null,
-        "links_title": "En Maintenance",
         "description": "Simplifier la gestion de projets et la gestion de recrutement sur les serveurs discords.",
-        "type_project": "Personnel",
+        "type_project": "Perso",
         "groupe": null,
-        "languages": ["nodejs", "python", "sql"]
+        "languages": ["nodejs", "python", "sql"],
+        "img" : "bot.jpg",
+        "carousel": ["bot.png"]
     },
     "Popeye": {
         "links": "https://github.com/lagie-marin/popeye",
-        "links_title": "Visit",
-        "description": "Créer des images dockers",
-        "type_project": "Ecole",
+        "description": "Conteneuriser et définir le déploiement d'une application de sondage Web simple. Il y a cinq éléments constituant la candidature:<br/><br/>- Poll, une application Web Flask Python qui collecte les votes et les envoie dans une file d'attente Redis.<br/>- Une file d'attente Redis, qui contient les votes envoyés par l'application Poll, en attendant qu'il soient consommés par le Worker.<br/>- Une base de données PostgreSQL, qui stocke (de manière persistante) les votes stockés par le Worker.<br/>- Result, une application Web Node.js qui récupère les votes de la base de données et affiche le résultat.",
+        "type_project": "Epitech",
         "groupe": null,
-        "languages": ["docker", "Devops"]
+        "languages": ["docker", "Devops"],
+        "img": "Popeye.webp",
+        "carousel": ["Popeye.webp"]
     }
 }

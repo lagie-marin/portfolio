@@ -1,90 +1,18 @@
-.project-box {
-    flex-grow: 1;
+.cardElement {
+    background-color: #2b3035;
+    width: 300px;
+    height: 26vh;
 }
 
-.project-card {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(246, 127, 244, 0.72);
-    width: 30vh;
-    align-items: center;
-    justify-content: center;
-
+/* project.css */
+.visible-button {
+    margin-top: auto; /* Assurez-vous que le bouton est aligné en bas */
+    margin-bottom: auto; /* Assurez-vous que le bouton est aligné en bas */
 }
 
-.project-card {
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
-
-.card {
-    border-radius: 20px;
-    color: black;
-    max-width: 50vh;
-    font-size: x-large;
-    padding: 1vh;
-    height: 2vh;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1vh;
-}
-
-.project-type,
-.disabled-button {
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid black;
-    transition: .4s linear;
-}
-
-.project-type {
-    cursor: pointer;
-    margin-top: auto;
-}
-
-.disabled-button {
-    background-color: rgb(172, 79, 124);
-    cursor: default;
-}
-
-.project-type::before {
-    content: "";
-    position: absolute;
-    width: 0px;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    border-radius: 15px;
-    background-color: rgb(255, 0, 208);
-    z-index: -1;
-    transition: .4s linear;
-}
-
-.project-type:hover::before {
-    width: 100%;
-}
-
-.btn-project {
-    bottom: -5px;
-}
-
-.btn-project {
-    background-color: transparent;
-    width: 97%;
-    border-radius: 15px;
-}
-
-.list-language {
-    position: relative;
-    display: flex;
-    gap: .2vh;
-    flex-wrap: wrap;
-}
-
-.type-project {
-    margin-top: auto;
+@media (max-width: 768px) {
+    .visible-button {
+        margin-top: 0; /* Ajustez la marge supérieure pour les petites fenêtres */
+        margin-bottom: 0; /* Ajustez la marge inférieure pour les petites fenêtres */
+    }
 }

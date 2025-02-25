@@ -45,7 +45,7 @@ function Box({id, className, style, title, titleClass = "", titleStyle, children
     className = className == undefined ? "" : ` ${className}`
     titleClass = titleClass == undefined ? "" : ` ${titleClass}`
     return <>
-        <div id={id} className={`item ${className}`} style={containerStyles}>
+        <div id={id} className={`item box ${className}`} style={containerStyles}>
             {title && <span id={title?.split(" ").join("-")} className={`item${titleClass}`} style={titleStyles}>{title}</span>}
             {children}
         </div>

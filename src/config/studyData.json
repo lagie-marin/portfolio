@@ -1,0 +1,16 @@
+{
+    "lycee": {
+        "smallImage": "./logo_region.webp",
+        "title": "Lycée 2020 - 2023",
+        "schoolImage": "./lycee.jpg",
+        "description": "Baccalauréat Général\nSpécialité Maths, NSI",
+        "actual": false
+    },
+    "epitech": {
+        "smallImage": "./Epitech_Official_Logo.png",
+        "title": "Epitech 2023 - 2028",
+        "schoolImage": "./epitech.jpg",
+        "description": "Epitech\nBachelor en informatique",
+        "actual": true
+    }
+}
