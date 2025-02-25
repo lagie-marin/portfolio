@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Badge, Button, Card, CloseButton, DrawerActionTrigger, DrawerBody, DrawerCloseTrigger, DrawerContent, DrawerFooter, DrawerHeader, DrawerRoot, DrawerTitle, DrawerTrigger, HStack, Image, Kbd, Stack, Text } from "@chakra-ui/react";
+import { Badge, Button, Card, CloseButton, DrawerActionTrigger, DrawerBody, DrawerCloseTrigger, DrawerContent, DrawerHeader, DrawerRoot, DrawerTitle, DrawerTrigger, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import { Box } from "./Box";
 import { getColorByType } from "../project/ProjectDetails";
 import "./project.css";
