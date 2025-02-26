@@ -1,0 +1,19 @@
+.project-btn {
+    color: black;
+    border-radius: 25px;
+    font-weight: normal;
+}
+
+.popup-contact {
+    z-index: 10;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+@media (max-width: 550px) {
+    .me-content {
+        margin: 0 auto;
+    }
+}

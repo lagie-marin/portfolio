@@ -2,6 +2,7 @@ import React from 'react';
 import SchoolCard from '@/components/schools/SchoolCard';
 import { Box } from '@chakra-ui/react';
 import styles from './SchoolList.module.css';
+import { IoMdArrowForward } from 'react-icons/io';
 
 interface SchoolListProps {
     studyData: {
@@ -33,7 +34,7 @@ const SchoolList: React.FC<SchoolListProps> = ({ studyData }) => {
                     />
                     {index < keys.length - 1 && (
                         <Box as="span" className={styles.arrow}>
-                            ➔
+                            <IoMdArrowForward />
                         </Box>
                     )}
                 </React.Fragment>

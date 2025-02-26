@@ -5,16 +5,23 @@ import './home.css';
 import SchoolLife from '../content/SchoolLife';
 import { Project } from '../content/Project';
 import { About } from '../content/About';
+import NavBar from '../navbar/NavBar';
+import { Me } from '../content/me';
 
 const Home: React.FC = () => {
-    return (
+    return <>
+        <NavBar />
         <MainContent />
-    );
+    </>
+    
 };
 
 function MainContent() {
     return <>
         <div className="box-container">
+            <Box id="me" className="primary">
+                <Me />
+            </Box>
             <Box id="skill" title="Mes compétences" titleClass="title" className="primary">
                 <Skills />
             </Box>
