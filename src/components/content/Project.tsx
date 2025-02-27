@@ -70,7 +70,7 @@ export function Project() {
                                                 Voir le projet
                                             </Button>
                                         </DrawerTrigger>
-                                        <DrawerContent className="drower" style={{top: `calc(${drawerTop}px - 7vh)`}}>
+                                        <DrawerContent className="drower" style={{top: `calc(${drawerTop}px - 2vh)`}}>
                                             <DrawerHeader>
                                                 <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
                                                     <DrawerTitle color="white">{name}</DrawerTitle>
