@@ -1,26 +1,55 @@
+import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './navbar.css';
+import { Contact } from '../contact/Contact';
 
 function NavBar() {
-    return <>
-        <Navbar collapseOnSelect expand="md" className="custom-navbar navbar-dark fixed-top">
-            <Container style={{position: 'relative'}}>
-                <Navbar.Brand href="#">Marin LAGIÉ</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto mx-auto">
-                        <Nav.Link href="#skill">Compétences</Nav.Link>
-                        <Nav.Link href="#school">Étude</Nav.Link>
-                        <Nav.Link href="#project">Projets</Nav.Link>
-                        <Nav.Link href="#about">A propos</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    </>
+    const [activeLink, setActiveLink] = useState('');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('section');
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - window.innerHeight / 2 && window.scrollY < sectionTop + sectionHeight - window.innerHeight / 2) {
+                    currentSection = section.getAttribute('id') || '';
+                }
+            });
+
+            setActiveLink(currentSection);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    return (
+        <>
+            <Navbar collapseOnSelect expand="md" className="custom-navbar navbar-dark fixed-top">
+                <Container style={{ position: 'relative' }}>
+                    <Navbar.Brand href="#">Marin LAGIÉ</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto mx-auto" style={{ border: "1px solid white", borderRadius: "30px" }}>
+                            <Nav.Link href="#skill" className={`${activeLink === 'skill' ? 'active-section' : ''}`}>Compétences</Nav.Link>
+                            <Nav.Link href="#school" className={`${activeLink === 'school' ? 'active-section' : ''}`}>Étude</Nav.Link>
+                            <Nav.Link href="#project" className={`${activeLink === 'project' ? 'active-section' : ''}`}>Projets</Nav.Link>
+                            <Nav.Link href="#about" className={`${activeLink === 'about' ? 'active-section' : ''}`}>A propos</Nav.Link>
+                            <Contact className="btn-contact" contentClass="popup-header me-content"/>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </>
+    );
 }
 
 export default NavBar;

@@ -19,21 +19,31 @@ const Home: React.FC = () => {
 function MainContent() {
     return <>
         <div className="box-container">
-            <Box id="me" className="primary">
-                <Me />
-            </Box>
-            <Box id="skill" title="Mes compétences" titleClass="title" className="primary">
-                <Skills />
-            </Box>
-            <Box id="school" title="Études" titleClass="sub-sub-title" className="primary">
-                <SchoolLife />
-            </Box>
-            <Box id="project" title="Projets" titleClass="sub-sub-title" className="primary">
-                <Project />
-            </Box>
-            <Box id="about" title="À propos" titleClass="sub-sub-title" className="primary">
-                <About />
-            </Box>
+            <section id="me">
+                <Box id="me-box" className="primary">
+                    <Me />
+                </Box>
+            </section>
+            <section id="skill">
+                <Box id="skill-box" title="Mes compétences" titleClass="title" className="primary">
+                    <Skills />
+                </Box>
+            </section>
+            <section id="school">
+                <Box id="school-box" title="Études" titleClass="sub-sub-title" className="primary">
+                    <SchoolLife />
+                </Box>
+            </section>
+            <section id="project">
+                <Box id="project-box" title="Projets" titleClass="sub-sub-title" className="primary">
+                    <Project />
+                </Box>
+            </section>
+            <section id="about">
+                <Box id="about-box" title="À propos" titleClass="sub-sub-title" className="primary">
+                    <About />
+                </Box>
+            </section>
         </div>
     </>
 }

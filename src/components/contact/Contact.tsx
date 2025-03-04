@@ -1,51 +1,59 @@
-import { useRef } from "react";
-import emailjs from '@emailjs/browser';
-import "./contact.css"
+import { Button, Text, HStack, VStack, DialogRoot, DialogTrigger, DialogContent, MenuRoot, Box, DialogHeader } from "@chakra-ui/react";
+import { CiLinkedin, CiMail, CiPhone } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import { toaster } from "@/components/ui/toaster"
 
-export function Contact() {
-    const form = useRef<HTMLFormElement>(null);
+type ContactProps = {
+    className?: string,
+    contentClass?: string
+}
 
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        if (form.current) {
-            emailjs.sendForm('service_cdj3z76', 'template_ew48ydw', form.current, {
-                publicKey: 'TMlwj6p8LKNT7MFOs',
-            })
-                .then(
-                    () => {
-                        (e.target as HTMLFormElement).reset();
-                        console.log('SUCCESS!');
-                    },
-                    (error) => {
-                        console.log('FAILED...', error);
-                    }
-                );
-        }
+export function Contact({className="", contentClass=""} : ContactProps) {
+    const handleCopy = (text: string) => {
+            navigator.clipboard.writeText(text);
+            toaster.create({
+                title: `${text} copié dans le presse-papier`,
+                type: "success",
+                duration: 3000
+            });
     };
-
     return (
-        <>
-            <section id="contact" className="contact">
-                <form ref={form} onSubmit={sendEmail}>
-                    <h2>Contact</h2>
-                    <div className="input-box">
-                        <label>Nom Complet</label>
-                        <input type="text" className="field" placeholder="Entrer votre Nom" name="name" required />
-                    </div>
-                    <div className="input-box">
-                        <label>Adresse Email</label>
-                        <input type="email" className="field" placeholder="Entrer votre Email" name="email" required />
-                    </div>
-                    <div className="input-box">
-                        <label>Votre message</label>
-                        <textarea name="message" className="field mess" placeholder="Entrer votre message" required></textarea>
-                    </div>
-                    <div className="g-recaptcha" data-sitekey="6LeytkEqAAAAADsN2Fgcep0_Mshwt5LiUvlHYmeQ" data-action="LOGIN"></div>
-                    <br />
-                    <button type="submit">Envoyer Message</button>
-                </form>
-            </section>
-        </>
-    );
+        <DialogRoot placement="center">
+            <DialogTrigger asChild>
+                <Button className={className} variant="outline" size="sm" backgroundColor="#2b3035" color="white" borderRadius="25px" fontWeight="normal">
+                    <MdOutlineEmail />Me contacter
+                </Button>
+            </DialogTrigger>
+            <DialogContent className={`popup-contact ${contentClass}`} backgroundColor="#18181b">
+                <DialogHeader className="sub-title">
+                    <p>Me contacter</p>
+                    <Box flex="1" height="0.5px" backgroundColor="grey" width="100%" />
+                </DialogHeader>
+                <MenuRoot>
+                    <VStack gap={4}>
+                        <HStack gap={4} width="100%" justifyContent="center">
+                            <Button backgroundColor="#60a5fa" color="black" borderColor="white" borderRadius="1px" width="47.5%" onClick={() => window.open("https://www.linkedin.com/in/marin-lagi%C3%A9-2b0b992a0/", "_blank")}>
+                                <CiLinkedin />LinkedIn
+                            </Button>
+                            <Button backgroundColor="#27272a" borderColor="white" borderRadius="1px" width="47.5%" onClick={() => window.open("https://github.com/lagie-marin", "_blank")}><FaGithub />GitHub</Button>
+                        </HStack>
+                        <HStack width="100%" alignItems="center">
+                            <Box flex="1" height=".5px" backgroundColor="grey" />
+                            <Text style={{ color: "white", textAlign: "center", margin: "0 10px" }}>Ou</Text>
+                            <Box flex="1" height=".5px" backgroundColor="grey" />
+                        </HStack>
+                        <HStack justifyContent="center" flexDirection="column" width="100%" marginBottom="30px">
+                            <Button backgroundColor="white" color="black" borderColor="white" borderRadius="1px" width="100%" onClick={() => handleCopy("L'email")}>
+                                <CiMail />marin.lagie@epiteh.eu
+                            </Button>
+                            <Button backgroundColor="#18181b" borderColor="white" borderRadius="1px" width="100%" onClick={() => handleCopy("Le numéro de téléphone")}>
+                                <CiPhone />(+33)6 95 16 56 15
+                            </Button>
+                        </HStack>
+                    </VStack>
+                </MenuRoot>
+            </DialogContent>
+        </DialogRoot>
+    )
 }

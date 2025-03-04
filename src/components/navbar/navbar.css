@@ -5,3 +5,17 @@
 .custom-navbar .nav-link, .custom-navbar .navbar-brand {
     color: #fff !important;
 }
+
+.nav-link.active-section {
+    color: green !important;
+}
+
+.btn-contact {
+    color: white;
+}
+
+.popup-header {
+    position: fixed;
+    display: flex;
+    transform: translate(13vw, 30vh);
+}
