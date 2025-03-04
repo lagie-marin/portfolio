@@ -6,11 +6,11 @@
 
 .popup-contact {
     display: flex;
-    left: 30vw;
     z-index: 10;
     justify-content: center;
     align-items: center;
     width: 300px;
+    margin: 0 auto;
 }
 
 .me-contact {

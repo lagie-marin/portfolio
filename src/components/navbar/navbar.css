@@ -17,5 +17,6 @@
 .popup-header {
     position: fixed;
     display: flex;
-    transform: translate(13vw, 30vh);
+    margin: 0 auto;
+    transform: translateY(30vh);
 }
