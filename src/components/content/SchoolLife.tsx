@@ -1,4 +1,3 @@
-import { Text } from "@chakra-ui/react";
 import { Box } from "./Box";
 import SchoolList from "../schools/SchoolList";
 import studyData from "../../config/studyData.json";
