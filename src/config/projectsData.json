@@ -38,5 +38,25 @@
         "languages": ["docker", "Devops"],
         "img": "Popeye.webp",
         "carousel": ["Popeye.webp"]
+    },
+    "MyMarvin": {
+        "links": "https://github.com/lagie-marin/mymarvin",
+        "desc_btn": "Voir le projet",
+        "description": "Ce projet met en place un serveur d'automatisation Jenkins configuré avec des jobs prédéfinis et des rôles utilisateurs pour effectuer des tests automatisés sur le projet.<br/>- Installation d’un serveur Jenkins<br/>- Création de jobs automatisés<br/>- Gestion des rôles utilisateurs<br/>- Tests automatisés du projet",
+        "type_project": "Epitech",
+        "groupe": "groupe",
+        "languages": ["groovy"],
+        "img": "jenkins_logo.png",
+        "carousel": ["jenkins_logo.png", "home_jenkins.png", "Tools.png", "Test_Marvin.png"]
+    },
+    "Octopus": {
+        "links": "https://github.com/lagie-marin/octopus",
+        "desc_btn": "Voir le projet",
+        "description": "Octopus est une application de vote distribuée basée sur des microservices qui permet aux utilisateurs de voter sur des questions de sondage, traite ces votes et affiche les résultats. L'application est déployée à l'aide d'Ansible pour l'automatisation de l'infrastructure.",
+        "type_project": "Epitech",
+        "groupe": "groupe",
+        "languages": ["ansible"],
+        "img": "ansible.webp",
+        "carousel": ["ansible.webp"]
     }
 }

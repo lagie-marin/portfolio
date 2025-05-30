@@ -94,10 +94,10 @@ export function Project() {
                                                     project.links != "" &&
                                                     (<Button size="sm" className="visible-button w-100" onClick={() => window.open(project.links, '_blank')}>{project.desc_btn}</Button>)
                                                 }
-                                                <Text className="projectDescription" color="white">
+                                                <Box id="projectDescription" className="projectDescription" style={{ color: "white" }}>
                                                     <Text fontWeight="bold">Description:</Text>
                                                     <div dangerouslySetInnerHTML={{ __html: project.description }} />
-                                                </Text>
+                                                </Box>
                                             </DrawerBody>
                                             <DrawerCloseTrigger />
                                         </DrawerContent>
