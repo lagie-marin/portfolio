@@ -9,7 +9,7 @@ function SchoolLife()
             <div className="text-normal">
                 <p>
                     Passionné par l'informatique depuis le collège, je poursuis mes études en informatique à Epitech.
-                    J'ai eu l'opportunité de travailler sur divers projets personnels et étudiants. 
+                    J'ai eu l'opportunité de travailler sur divers projets personnels et étudiants.
                 </p>
             </div>
             <SchoolList studyData={studyData}></SchoolList>
