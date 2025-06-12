@@ -1,15 +1,16 @@
 import { Box } from "./Box";
 import SchoolList from "../schools/SchoolList";
 import studyData from "../../config/studyData.json";
+import { useLanguage } from "@/config/langage";
 
 function SchoolLife()
 {
+    const { t } = useLanguage();
     return (
-        <Box id="content-4" title="Mon parcours scolaire" titleClass="title" titleStyle={{ color: "white"}}>
+        <Box id="content-4" title={t("school.title")} titleClass="title" titleStyle={{ color: "white"}}>
             <div className="text-normal">
                 <p>
-                    Passionné par l'informatique depuis le collège, je poursuis mes études en informatique à Epitech.
-                    J'ai eu l'opportunité de travailler sur divers projets personnels et étudiants.
+                    {t("school.desc")}
                 </p>
             </div>
             <SchoolList studyData={studyData}></SchoolList>

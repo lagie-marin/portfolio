@@ -1,47 +1,74 @@
 import { useState } from "react";
 import skillsDataJson from "../../config/skillsData.json"
 import { Button } from "@chakra-ui/react";
+import { useLanguage } from '@/config/langage';
 
+// Types mis à jour pour refléter la structure multilingue
 type SkillCategory = {
+    fr: string;
+    en: string;
     id: string;
     skills: string[];
 };
 
 type SkillsData = {
-    [key: string]: string | SkillCategory;
+    DefaultCategory: string;
+    Categories: {
+        [key: string]: SkillCategory;
+    }
 }
 
-function Skills()
-{
-    const skillsData: SkillsData = skillsDataJson;
+function Skills() {
+    const skillsData = skillsDataJson as SkillsData;
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [activeButton, setActiveButton] = useState<string | null>(null);
+    const { language } = useLanguage();
 
     const handleCategoryClick = (category: string) => {
         setActiveButton(category);
         setSelectedCategory(category);
     };
-    const isSkillCategory = (value: any): value is SkillCategory => {
-        return value && typeof value === "object" && "id" in value && "skills" in value;
+
+    // Initialiser avec la catégorie par défaut
+    if (!selectedCategory && skillsData.DefaultCategory) {
+        handleCategoryClick(skillsData.DefaultCategory);
     }
 
-    if (!selectedCategory && typeof skillsData["Default"] === "string" && skillsData["Default"] in skillsData)
-        handleCategoryClick(skillsData["Default"]);
     return (
         <div className="item" style={{ width: "10vh" }}>
             <div style={{ display: 'flex', gap: '0.2vh', flexWrap: 'wrap', justifyContent: "center" }}>
-                {Object.keys(skillsData).map((category, index) => (
-                    category !== 'Default' && (
-                        <Button key={index} id={category} className={`skills-type text ${category == activeButton ? "is-active" : ""}`} onClick={() => handleCategoryClick(category)}>{category}</Button>
-                    )
-                ))}
+                {Object.keys(skillsData.Categories).map((categoryKey) => {
+                    const category = skillsData.Categories[categoryKey];
+                    // Utiliser le nom localisé pour l'affichage
+                    const localizedName = language === 'fr' ? category.fr : category.en;
+                    
+                    return (
+                        <Button 
+                            key={categoryKey}
+                            id={categoryKey}
+                            className={`skills-type text ${categoryKey === activeButton ? "is-active" : ""}`}
+                            onClick={() => handleCategoryClick(categoryKey)}
+                        >
+                            {localizedName}
+                        </Button>
+                    );
+                })}
             </div>
             <div>
-                {selectedCategory && isSkillCategory(skillsData[selectedCategory]) && (
+                {selectedCategory && skillsData.Categories[selectedCategory] && (
                     <div>
-                        <h3 className="sub-title">{selectedCategory}</h3>
-                        <div id={skillsData[selectedCategory].id} key={selectedCategory} style={{ display: 'flex', gap: '0.2vh', flexWrap: 'wrap', justifyContent: "center" }}>
-                            {skillsData[selectedCategory].skills.map((skill, index) => (
+                        <h3 className="sub-title">
+                            {language === 'fr' 
+                                ? skillsData.Categories[selectedCategory].fr 
+                                : skillsData.Categories[selectedCategory].en
+                            }
+                        </h3>
+                        <div 
+                            id={skillsData.Categories[selectedCategory].id} 
+                            key={selectedCategory}
+                            style={{ display: 'flex', gap: '0.2vh', flexWrap: 'wrap', justifyContent: "center" }}
+                        >
+                            {skillsData.Categories[selectedCategory].skills.map((skill, index) => (
                                 <div className="skills-element text" key={index}>
                                     {skill}
                                 </div>
@@ -52,6 +79,6 @@ function Skills()
             </div>
         </div>
     );
-};
+}
 
 export default Skills;

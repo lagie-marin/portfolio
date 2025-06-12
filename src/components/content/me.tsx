@@ -3,19 +3,21 @@ import { IoMdArrowForward } from "react-icons/io";
 import { Toaster } from "@/components/ui/toaster"
 import "./me.css";
 import { Contact } from "../contact/Contact";
+import { useLanguage } from "@/config/langage";
 
 export function Me() {
+    const { t } = useLanguage();
     return (
         <>
             <HStack align="center" gap={2} flex={1} p={4} justifyContent="space-between" wrap="wrap">
                 <VStack align="flex-start" gap={4} flex={1}>
                     <Stack direction="row" alignItems="flex-start">
-                        <Badge size="md" colorPalette="orange" variant="subtle">Étudiant à Épitech</Badge>
+                        <Badge size="md" colorPalette="orange" variant="subtle">{t("me.student")}</Badge>
                     </Stack>
-                    <Text className="title">Développeur Full-Stack</Text>
+                    <Text className="title">{t("me.dev")}</Text>
                     <div className="me-content">
                         <Link href="#project" textDecoration="none" marginRight="1vw">
-                            <Button backgroundColor="white" color="black" borderRadius="25px" fontWeight="normal">Mes projets <IoMdArrowForward /></Button>
+                            <Button backgroundColor="white" color="black" borderRadius="25px" fontWeight="normal">{t("me.projects")} <IoMdArrowForward /></Button>
                         </Link>
                         <Contact className="me-contact"/>
                     </div>

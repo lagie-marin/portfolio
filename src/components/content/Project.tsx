@@ -5,12 +5,19 @@ import "./project.css";
 import "../../css/card.style.css";
 import projectDataJson from "../../config/projectsData.json";
 import { Carousel } from "react-bootstrap";
+import { useLanguage } from '@/config/langage';
+
+// Mise à jour de l'interface pour refléter la structure multilingue
+interface ProjectTranslation {
+    desc_btn: string | null;
+    description: string;
+}
 
 interface ProjectData {
     [key: string]: {
         links: string;
-        desc_btn: string | null;
-        description: string;
+        fr: ProjectTranslation;
+        en: ProjectTranslation;
         type_project: string;
         groupe: string | null;
         languages: string[];
@@ -35,6 +42,7 @@ export const getColorByType = (type: string) => {
 export function Project() {
     const projectData: ProjectData = projectDataJson;
     const [drawerTop, setDrawerTop] = useState(0);
+    const { t, language } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -50,11 +58,13 @@ export function Project() {
     }, []);
 
     return (
-        <Box id="content-6" title="Mes projets" titleClass='title' className="project" titleStyle={{color: "white"}} style={{ alignItems: "center" }}>
-            <Text className="text-normal">Découvrez mes derniers projets dans le développement informatique</Text>
+        <Box id="content-6" title={t("me.projects")} titleClass='title' className="project" titleStyle={{color: "white"}} style={{ alignItems: "center" }}>
+            <Text className="text-normal">{t("project.discover")}</Text>
             <div className="cardContainer" style={{ display: "flex", gap: "4vh", flexWrap: "wrap", justifyContent: "center" }}>
                 {Object.keys(projectData).map(name => {
                     const project = projectData[name];
+                    const localizedData = project[language] || project.fr;
+                    
                     return (
                         <Card.Root key={name} className="cardElement" maxW="sm" overflow="hidden">
                             <Image src={project.img} alt={name} className="cardImage" />
@@ -67,7 +77,7 @@ export function Project() {
                                     <DrawerRoot key={`drawer-${name}`} size="md">
                                         <DrawerTrigger asChild>
                                             <Button size="sm" className="visible-button">
-                                                Voir le projet
+                                                {t("project.view")}
                                             </Button>
                                         </DrawerTrigger>
                                         <DrawerContent className="drower" style={{top: `calc(${drawerTop}px - 2vh)`}}>
@@ -91,12 +101,14 @@ export function Project() {
                                                     ))}
                                                 </Carousel>
                                                 {
-                                                    project.links != "" &&
-                                                    (<Button size="sm" className="visible-button w-100" onClick={() => window.open(project.links, '_blank')}>{project.desc_btn}</Button>)
+                                                    project.links !== "" && localizedData.desc_btn &&
+                                                    (<Button size="sm" className="visible-button w-100" onClick={() => window.open(project.links, '_blank')}>
+                                                        {localizedData.desc_btn}
+                                                    </Button>)
                                                 }
                                                 <Box id="projectDescription" className="projectDescription" style={{ color: "white" }}>
-                                                    <Text fontWeight="bold">Description:</Text>
-                                                    <div dangerouslySetInnerHTML={{ __html: project.description }} />
+                                                    <Text fontWeight="bold">{t("project.description")}</Text>
+                                                    <div dangerouslySetInnerHTML={{ __html: localizedData.description }} />
                                                 </Box>
                                             </DrawerBody>
                                             <DrawerCloseTrigger />

@@ -1,16 +1,28 @@
 {
     "lycee": {
         "smallImage": "./logo_region.webp",
-        "title": "Lycée 2020 - 2023",
         "schoolImage": "./lycee.jpg",
-        "description": "Baccalauréat Général\nSpécialité Maths, NSI",
-        "actual": false
+        "actual": false,
+        "fr": {
+            "title": "Lycée 2020 - 2023",
+            "description": "Baccalauréat Général\nSpécialité Maths, NSI"
+        },
+        "en": {
+            "title": "High School 2020 - 2023",
+            "description": "General Baccalaureate\nMaths & Computer Science specialization"
+        }
     },
     "epitech": {
         "smallImage": "./Epitech_Official_Logo.png",
-        "title": "Epitech 2023 - 2028",
         "schoolImage": "./epitech.jpg",
-        "description": "Epitech\nBachelor en informatique",
-        "actual": true
+        "actual": true,
+        "fr": {
+            "title": "Epitech 2023 - 2028",
+            "description": "Epitech\nBachelor en informatique"
+        },
+        "en": {
+            "title": "Epitech 2023 - 2028",
+            "description": "Epitech\nBachelor of Computer Science"
+        }
     }
 }

@@ -1,46 +1,56 @@
 {
-    "Default": "Languages",
+  "DefaultCategory": "Languages",
+  "Categories": {
     "Languages": {
-        "id": "0",
-        "skills": [
-            "C",
-            "PHP",
-            "HTML",
-            "CSS",
-            "JS",
-            "TS",
-            "Python",
-            "Node.js",
-            "Bash",
-            "Blueprint",
-            "SFML",
-            "Java"
-        ]
+      "fr": "Langages",
+      "en": "Languages",
+      "id": "0",
+      "skills": [
+        "C",
+        "PHP",
+        "HTML",
+        "CSS",
+        "JS",
+        "TS",
+        "Python",
+        "Node.js",
+        "Bash",
+        "Blueprint",
+        "SFML",
+        "Java"
+      ]
     },
-    "Base de données": {
-        "id": "1",
-        "skills": [
-            "MongoDB",
-            "MySql",
-            "PhpMyAdmin"
-        ]
+    "Database": {
+      "fr": "Base de données",
+      "en": "Databases",
+      "id": "1",
+      "skills": [
+        "MongoDB",
+        "MySql",
+        "PhpMyAdmin"
+      ]
     },
-    "Outil de travail": {
-        "id": "2",
-        "skills": [
-            "Vscode",
-            "Visual Studio",
-            "IntelliJ IDEA",
-            "Eclipse",
-            "Docker",
-            "Unity",
-            "Unreal Engine"
-        ]
+    "Tools": {
+      "fr": "Outils de travail",
+      "en": "Working Tools",
+      "id": "2",
+      "skills": [
+        "Vscode",
+        "Visual Studio",
+        "IntelliJ IDEA",
+        "Eclipse",
+        "Docker",
+        "Unity",
+        "Unreal Engine"
+      ]
     },
-    "FrameWork": {
-        "id": "3",
-        "skills": [
-            "React"
-        ]
+    "Framework": {
+      "fr": "Framework",
+      "en": "Framework",
+      "id": "3",
+      "skills": [
+        "React"
+      ]
     }
+  }
 }

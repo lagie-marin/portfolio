@@ -3,6 +3,7 @@ import { CiLinkedin, CiMail, CiPhone } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { toaster } from "@/components/ui/toaster"
+import { useLanguage } from "@/config/langage";
 
 type ContactProps = {
     className?: string,
@@ -10,10 +11,12 @@ type ContactProps = {
 }
 
 export function Contact({className="", contentClass=""} : ContactProps) {
+    const { t } = useLanguage();
+
     const handleCopy = (text: string) => {
             navigator.clipboard.writeText(text);
             toaster.create({
-                title: `${text} copié dans le presse-papier`,
+                title: `${text} ${t("contact.toaster")}`,
                 type: "success",
                 duration: 3000
             });
@@ -22,12 +25,12 @@ export function Contact({className="", contentClass=""} : ContactProps) {
         <DialogRoot placement="center">
             <DialogTrigger asChild>
                 <Button className={className} variant="outline" size="sm" backgroundColor="#2b3035" color="white" borderRadius="25px" fontWeight="normal">
-                    <MdOutlineEmail />Me contacter
+                    <MdOutlineEmail />{t("contact.button")}
                 </Button>
             </DialogTrigger>
             <DialogContent className={`popup-contact ${contentClass}`} backgroundColor="#18181b">
                 <DialogHeader className="sub-title">
-                    <p>Me contacter</p>
+                    <p>{t("contact.button")}</p>
                     <Box flex="1" height="0.5px" backgroundColor="grey" width="100%" />
                 </DialogHeader>
                 <MenuRoot>
@@ -40,7 +43,7 @@ export function Contact({className="", contentClass=""} : ContactProps) {
                         </HStack>
                         <HStack width="100%" alignItems="center">
                             <Box flex="1" height=".5px" backgroundColor="grey" />
-                            <Text style={{ color: "white", textAlign: "center", margin: "0 10px" }}>Ou</Text>
+                            <Text style={{ color: "white", textAlign: "center", margin: "0 10px" }}>{t("contact.or")}</Text>
                             <Box flex="1" height=".5px" backgroundColor="grey" />
                         </HStack>
                         <HStack justifyContent="center" flexDirection="column" width="100%" marginBottom="30px">

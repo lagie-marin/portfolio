@@ -1,8 +1,14 @@
 {
     "MyRPG (C)": {
         "links": "https://github.com/lagie-marin/my_rpg",
-        "desc_btn": "Voir le projet",
-        "description": "My RPG: Développement d'un jeu de rôle en C avec la librairie CSFML.<br/> - Gestion, de la carte et des collisions<br/> - Gestion des menus<br/> - Gestion des combats",
+        "fr": {
+            "desc_btn": "Voir le projet",
+            "description": "My RPG: Développement d'un jeu de rôle en C avec la librairie CSFML.<br/> - Gestion, de la carte et des collisions<br/> - Gestion des menus<br/> - Gestion des combats"
+        },
+        "en": {
+            "desc_btn": "View project",
+            "description": "My RPG: Development of a role-playing game in C using the CSFML library.<br/> - Map and collision management<br/> - Menu management<br/> - Combat management"
+        },
         "type_project": "Epitech",
         "groupe": "groupe",
         "languages": [ "c" ],
@@ -11,18 +17,30 @@
     },
     "MyHunter (C)": {
         "links": "https://github.com/lagie-marin/myhunter",
-        "desc_btn": "Voir le projet",
-        "description": "MyHunter: Réalisation d'un jeu vidéo basé sur les règles du Duck Hunt. Les règles sont les suivantes:<br/>- Le joueur est un chasseur qui tire sur des canards.<br/>- Les canards doivent apparaître à l'écran et se déplacer d'un côté à l'autre.<br/>- Le joueur peux cliquer dessus pour les tirer.<br/>- Savoir gérer les entrées de l'utilisateur<br/>- Afficher des sprites",
+        "fr": {
+            "desc_btn": "Voir le projet",
+            "description": "MyHunter: Réalisation d'un jeu vidéo basé sur les règles du Duck Hunt. Les règles sont les suivantes:<br/>- Le joueur est un chasseur qui tire sur des canards.<br/>- Les canards doivent apparaître à l'écran et se déplacer d'un côté à l'autre.<br/>- Le joueur peux cliquer dessus pour les tirer.<br/>- Savoir gérer les entrées de l'utilisateur<br/>- Afficher des sprites"
+        },
+        "en": {
+            "desc_btn": "View project",
+            "description": "MyHunter: Creation of a video game based on Duck Hunt rules. The rules are:<br/>- The player is a hunter shooting at ducks.<br/>- Ducks must appear on screen and move from one side to another.<br/>- The player can click on them to shoot.<br/>- Handle user inputs<br/>- Display sprites"
+        },
         "type_project": "Epitech",
         "groupe": null,
         "languages": [ "c" ],
-        "img" : "myhunter.png",
+        "img": "myhunter.png",
         "carousel": ["myhunter.png"]
     },
     "Petroleum (NodeJS, Python, SQL)": {
         "links": "",
-        "desc_btn": null,
-        "description": "Simplifier la gestion de projets et la gestion de recrutement sur les serveurs discords.",
+        "fr": {
+            "desc_btn": null,
+            "description": "Simplifier la gestion de projets et la gestion de recrutement sur les serveurs discords."
+        },
+        "en": {
+            "desc_btn": null,
+            "description": "Simplify project management and recruitment management on Discord servers."
+        },
         "type_project": "Perso",
         "groupe": null,
         "languages": ["nodejs", "python", "sql"],
@@ -31,8 +49,14 @@
     },
     "Popeye (Docker, Devops)": {
         "links": "https://github.com/lagie-marin/popeye",
-        "desc_btn": "Voir le projet",
-        "description": "Conteneuriser et définir le déploiement d'une application de sondage Web simple. Il y a cinq éléments constituant la candidature:<br/><br/>- Poll, une application Web Flask Python qui collecte les votes et les envoie dans une file d'attente Redis.<br/>- Une file d'attente Redis, qui contient les votes envoyés par l'application Poll, en attendant qu'il soient consommés par le Worker.<br/>- Une base de données PostgreSQL, qui stocke (de manière persistante) les votes stockés par le Worker.<br/>- Result, une application Web Node.js qui récupère les votes de la base de données et affiche le résultat.",
+        "fr": {
+            "desc_btn": "Voir le projet",
+            "description": "Conteneuriser et définir le déploiement d'une application de sondage Web simple. Il y a cinq éléments constituant la candidature:<br/><br/>- Poll, une application Web Flask Python qui collecte les votes et les envoie dans une file d'attente Redis.<br/>- Une file d'attente Redis, qui contient les votes envoyés par l'application Poll, en attendant qu'il soient consommés par le Worker.<br/>- Une base de données PostgreSQL, qui stocke (de manière persistante) les votes stockés par le Worker.<br/>- Result, une application Web Node.js qui récupère les votes de la base de données et affiche le résultat."
+        },
+        "en": {
+            "desc_btn": "View project",
+            "description": "Containerize and define the deployment of a simple web polling application. There are five elements that make up the application:<br/><br/>- Poll, a Python Flask web application that collects votes and sends them to a Redis queue.<br/>- A Redis queue, which holds votes sent by the Poll application until they are consumed by the Worker.<br/>- A PostgreSQL database, which persistently stores the votes processed by the Worker.<br/>- Result, a Node.js web application that fetches votes from the database and displays the results."
+        },
         "type_project": "Epitech",
         "groupe": null,
         "languages": ["docker", "Devops"],
@@ -41,8 +65,14 @@
     },
     "MyMarvin (Groovy)": {
         "links": "https://github.com/lagie-marin/mymarvin",
-        "desc_btn": "Voir le projet",
-        "description": "Ce projet met en place un serveur d'automatisation Jenkins configuré avec des jobs prédéfinis et des rôles utilisateurs pour effectuer des tests automatisés sur le projet.<br/>- Installation d’un serveur Jenkins<br/>- Création de jobs automatisés<br/>- Gestion des rôles utilisateurs<br/>- Tests automatisés du projet",
+        "fr": {
+            "desc_btn": "Voir le projet",
+            "description": "Ce projet met en place un serveur d'automatisation Jenkins configuré avec des jobs prédéfinis et des rôles utilisateurs pour effectuer des tests automatisés sur le projet.<br/>- Installation d'un serveur Jenkins<br/>- Création de jobs automatisés<br/>- Gestion des rôles utilisateurs<br/>- Tests automatisés du projet"
+        },
+        "en": {
+            "desc_btn": "View project",
+            "description": "This project sets up a Jenkins automation server configured with predefined jobs and user roles to perform automated testing on projects.<br/>- Jenkins server installation<br/>- Creation of automated jobs<br/>- User role management<br/>- Automated project testing"
+        },
         "type_project": "Epitech",
         "groupe": "groupe",
         "languages": ["groovy"],
@@ -51,8 +81,14 @@
     },
     "Octopus (Ansible)": {
         "links": "https://github.com/lagie-marin/octopus",
-        "desc_btn": "Voir le projet",
-        "description": "Octopus est une application de vote distribuée basée sur des microservices qui permet aux utilisateurs de voter sur des questions de sondage, traite ces votes et affiche les résultats. L'application est déployée à l'aide d'Ansible pour l'automatisation de l'infrastructure.",
+        "fr": {
+            "desc_btn": "Voir le projet",
+            "description": "Octopus est une application de vote distribuée basée sur des microservices qui permet aux utilisateurs de voter sur des questions de sondage, traite ces votes et affiche les résultats. L'application est déployée à l'aide d'Ansible pour l'automatisation de l'infrastructure."
+        },
+        "en": {
+            "desc_btn": "View project",
+            "description": "Octopus is a distributed voting application based on microservices that allows users to vote on poll questions, processes these votes, and displays the results. The application is deployed using Ansible for infrastructure automation."
+        },
         "type_project": "Epitech",
         "groupe": "groupe",
         "languages": ["ansible"],
@@ -61,8 +97,14 @@
     },
     "Epicine (NodeJs, React, SQL, Vite, TypeScript)" : {
         "links": "https://github.com/Slakkos/EpiCine-Worker",
-        "desc_btn": "Voir le projet",
-        "description": "Le projet vise à créer un site web affichant une liste de films avec des détails tels que le synopsis, la date de sortie, le casting et d'autres informations clés. Les utilisateurs pourront rechercher des films, consulter leurs descriptions et accéder à des informations complémentaires. L'objectif est de proposer une plateforme intuitive et interactive, similaire à « The Movie Database », pour explorer et découvrir des films de différents genres et époques.<br/>J'ai principalement développé la partie backend en créant une API permettant de faire des requêtes au serveur.",
+        "fr": {
+            "desc_btn": "Voir le projet",
+            "description": "Le projet vise à créer un site web affichant une liste de films avec des détails tels que le synopsis, la date de sortie, le casting et d'autres informations clés. Les utilisateurs pourront rechercher des films, consulter leurs descriptions et accéder à des informations complémentaires. L'objectif est de proposer une plateforme intuitive et interactive, similaire à « The Movie Database », pour explorer et découvrir des films de différents genres et époques.<br/>J'ai principalement développé la partie backend en créant une API permettant de faire des requêtes au serveur."
+        },
+        "en": {
+            "desc_btn": "View project",
+            "description": "The project aims to create a website displaying a list of movies with details such as synopsis, release date, cast, and other key information. Users will be able to search for movies, view their descriptions, and access additional information. The goal is to provide an intuitive and interactive platform, similar to \"The Movie Database\", for exploring and discovering movies from different genres and eras.<br/>I primarily developed the backend by creating an API that allows making requests to the server."
+        },
         "type_project": "Perso",
         "groupe": "groupe",
         "languages": ["nodejs", "react", "sql", "vite", "typescript"],
