@@ -47,10 +47,10 @@ export function Contact({className="", contentClass=""} : ContactProps) {
                             <Box flex="1" height=".5px" backgroundColor="grey" />
                         </HStack>
                         <HStack justifyContent="center" flexDirection="column" width="100%" marginBottom="30px">
-                            <Button backgroundColor="white" color="black" borderColor="white" borderRadius="1px" width="100%" onClick={() => handleCopy("L'email")}>
-                                <CiMail />marin.lagie@epiteh.eu
+                            <Button backgroundColor="white" color="black" borderColor="white" borderRadius="1px" width="100%" onClick={() => handleCopy("marin.lagie@epitech.eu")}>
+                                <CiMail />marin.lagie@epitech.eu
                             </Button>
-                            <Button backgroundColor="#18181b" borderColor="white" borderRadius="1px" width="100%" onClick={() => handleCopy("Le numéro de téléphone")}>
+                            <Button backgroundColor="#18181b" borderColor="white" borderRadius="1px" width="100%" onClick={() => handleCopy("(+33)6 95 16 56 15")}>
                                 <CiPhone />(+33)6 95 16 56 15
                             </Button>
                         </HStack>
